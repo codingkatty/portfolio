@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Bento Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="nav-container">
+        <div class="nav-grid">
+            <div class="nav-item active" data-page="home">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="nav-item" data-page="projects">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="nav-item" data-page="about">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="nav-item" data-page="contact">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        <section id="home" class="page active">
+            <h1 class="holographic"><span class="typing-container"><span class="typing-effect">Welcome</span></span>
+            </h1>
+            <div class="bento-grid featured">
+                <div class="bento-item large">
+                    <div class="profile-container">
+                        <div class="profile-content">
+                            <h2>Hi, I'm Candy</h2>
+                            <p>Student || Co-founder of Aether Club</p>
+                            <div class="social-links">
+                                <a href="https://github.com/codingkatty" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/lim-xin-ying-bb22ab335/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://x.com/LimYing86340" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="profile-image">
+                            <img src="images/me.png" alt="Candy's Profile Picture">
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <h2>Fun Fact</h2>
+                    <p>My fav font combo is Inter + JetBrains Mono :D</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="page">
+            <h1 class="holographic"><span class="typing-container"><span class="typing-effect">My Projects</span></span>
+            </h1>
+            <div class="bento-grid">
+                <div class="bento-item">
+                    <img src="images/aries.png" alt="Aries">
+                    <h2>Aries</h2>
+                    <p>An interactive exoplanet map viewer using NASA data.</p>
+                </div>
+                <div class="bento-item">
+                    <img src="images/clubhomepage.png" alt="Aether">
+                    <h2>Aether Club</h2>
+                    <p>(WIP) a homepage for Muna & I's hack club, Aether.</p>
+                </div>
+                <div class="bento-item">
+                    <img src="images/robopal.png" alt="sarah">
+                    <h2>RoboPal</h2>
+                    <p>Penpal email robot. Beep boop. sarah.robopal@gmail.com</p>
+                </div>
+                <div class="bento-item">
+                    <img src="images/profilepic.png" alt="profilepic">
+                    <h2>PFP Maker</h2>
+                    <p>Identicon generator / editor.</p>
+                </div>
+                <div class="bento-item">
+                    <img src="images/coolai.png" alt="coolai">
+                    <h2>CoolAI</h2>
+                    <p>Project I made for High Seas.</p>
+                </div>
+                <div class="bento-item">
+                    <img src="images/yeditor.png" alt="yeditor">
+                    <h2>Yeditor</h2>
+                    <p>Project I made for High Seas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page">
+            <h1 class="holographic"><span class="typing-container"><span class="typing-effect">About Me</span></span>
+            </h1>
+            <div class="bento-grid">
+                <div class="bento-item large">
+                    <h2>My Journey</h2>
+                    <p>I've started coding since 7 and have since loved to code.</p>
+                </div>
+                <div class="bento-item">
+                    <h2>Skills</h2>
+                    <p>
+                        • JavaScript<br>
+                        • HTML / CSS<br>
+                        • Node.js / Python<br>
+                        • UI/UX Design
+                    </p>
+                </div>
+                <div class="bento-item">
+                    <h2>Education</h2>
+                    <p>Kolej Permata Pintar Negara 2024-2028</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <h1 class="holographic"><span class="typing-container"><span class="typing-effect">Contact</span></span>
+            </h1>
+            <div class="bento-grid">
+                <div class="bento-item">
+                    <h2>Get in Touch</h2>
+                    <p>Email: m001720@permatapintar.ukm.edu.my</p>
+                    <div class="social-links">
+                        <a href="https://github.com/codingkatty" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/lim-xin-ying-bb22ab335/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/LimYing86340" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pages = document.querySelectorAll('.page');
+
+            pages.forEach(page => {
+                if (!page.classList.contains('active')) {
+                    page.style.display = 'none';
+                }
+            });
+
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelectorAll('.nav-item').forEach(nav =>
+                        nav.classList.remove('active')
+                    );
+
+                    const targetPage = document.getElementById(item.dataset.page);
+                    pages.forEach(page => {
+                        if (page === targetPage) {
+                            page.style.display = 'block';
+                            setTimeout(() => {
+                                page.classList.add('active');
+                            }, 50);
+                        } else {
+                            page.classList.remove('active');
+                            setTimeout(() => {
+                                page.style.display = 'none';
+                            }, 500);
+                        }
+                    });
+
+                    item.classList.add('active');
+
+                    const heading = targetPage.querySelector('h1 .typing-effect');
+                    if (heading) {
+                        heading.style.animation = 'none';
+                        heading.offsetHeight;
+                        heading.style.animation = 'typing 2s steps(30, end) forwards, blink 1s step-end infinite';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
